@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Star Wars</title>
+    <style>
+        ul{
+            border: 5px solid;
+            color: black;
+        }
+        .none{
+            border: none;
+        }
+        td{
+            padding: 15px;
+            border: 5px solid;
+            color: black;
+        }
+        .bd{
+            padding: 15px;
+        }
+        li,b{
+            padding: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="none">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="bd">
+                        <h1> <%= films[id].title %> </h1>
+                    </td>
+                    <td class="bd">
+                        <li><b>Id</b>: <%= films[id].id %></li>
+                    </td>
+                    <td class="bd">
+                        <li><b>Id ep</b>: <%= films[id].episode_id %></li>
+                        
+                    </td>
+                    <td class="bd">
+                        <li><b>Diretor</b>: <%= films[id].director %></li>
+                        
+                    </td>
+                    <td class="bd">
+                        <li><b>Titulo</b>: <%= films[id].title %></li>
+                    </td>
+                    <td class="bd">
+                        <li><b>Produto</b>: <%= films[id].producer %></li>
+                    </td>
+                    <td class="bd">
+                        <li><b>Data</b>: <%= films[id].release_date %></li>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+        
+        
+        
+        <table>
+            <tbody>
+                <tr>
+                    <td class="none">
+                        <li><b>Personagens</b>:
+                            <ul>
+                                <%for(var i = 0; i< films[id].characters.length; i++){%>
+                                <li><a href="<%= films[id].characters[i] %>"><%= films[id].characters[i] %></a></li>
+                                <%}%>
+                            </ul>
+                        </li>
+                    </td>
+
+                    <td class="none">
+                        <li><b>Naves</b>:
+                            <ul>
+                                <%for(var i = 0; i< films[id].starships.length; i++){%>
+                                    <li><a href="<%= films[id].starships[i] %>"><%= films[id].starships[i] %></a></li>
+                                <%}%>
+                            </ul>
+                        </li>
+                    </td>
+                    <td class="none">
+                        <li><b>Planetas</b>:
+                            <ul>
+                                <%for(var i = 0; i< films[id].planets.length; i++){%>
+                                    <li><a href="<%= films[id].planets[i] %>"><%= films[id].planets[i] %></a></li>
+                                <%}%>
+                            </ul>
+                        </li>   
+                    </td>
+                    <td class="none">
+                        <li><b>Especies</b>:
+                            <ul>
+                                <%for(var i = 0; i< films[id].species.length; i++){%>
+                                    <li><a href="<%= films[id].species[i] %>"><%= films[id].species[i] %></a></li>
+                                <%}%>
+                            </ul>
+                        </li>
+                    </td>
+                    <td class="none">
+                        <li><b>Veiculos</b>:
+                            <ul>
+                                <%for(var i = 0; i< films[id].vehicles.length; i++){%>
+                                    <li><a href="<%= films[id].vehicles[i] %>"><%= films[id].vehicles[i] %></a></li>
+                                <%}%>
+                            </ul>
+                        </li>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </ul>
+</body>
+</html>

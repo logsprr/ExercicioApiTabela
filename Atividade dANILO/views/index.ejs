@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Star wars</title>
+    <style>
+            ul{
+                border: 5px solid;
+                color: black;
+            }
+            .none{
+                border: none;
+            }
+            td{
+                padding: 15px;
+                border: 5px solid;
+                color: black;
+            }
+            .bd{
+                padding: 15px;
+            }
+            li,b{
+                padding: 10px;
+                padding-left: 10px;
+            }
+            .black{
+                color: red;
+                width: auto;
+                height: 70px;;
+                background-color: black;
+                text-align: center;
+                font-size: 24pt;
+            }
+        </style>
+</head>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<body>
+    <div class="black">Tabela</div>
+    <table class="table table-dark">
+        <tbody>
+                <tr>
+                    <td>
+                        Id filme
+                    </td>
+                
+                    <td>
+                       Id ep
+                    </td>
+                
+                    <td>
+                        Titulo
+                    </td>
+                
+                    <td>
+                        sinopse
+                    </td>
+                </tr>
+        </tbody>
+        <tbody>
+            <% for(var i = 0; i < films.length ; i++){ %>
+            <tr onclick="location.href = '/films/<%= i %>';">
+                <td> <%= films[i].id %> </td>
+                <td> <%= films[i].episode_id %> </td>
+                <td> <%= films[i].title %> </td>
+                <td> <%= films[i].opening_crawl %> </td>
+            </tr>
+            <% } %>
+        </tbody>
+    </table>
+</body>
+</html>
