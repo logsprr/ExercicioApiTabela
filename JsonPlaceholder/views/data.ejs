@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Json Place Holder</title>
+    <style>
+        ul{
+            border: 5px solid;
+            color: black;
+        }
+        .none{
+            border: none;
+        }
+        td{
+            padding: 15px;
+            border: 5px solid;
+            color: black;
+        }
+        .bd{
+            padding: 15px;
+        }
+        li,b{
+            padding: 10px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <ul class="none">
+        <table>
+            <tbody>
+                <tr>
+                    <td class="bd">
+                        <h1> <b>Titulo</b>: <%= full[id].title %></h1>
+                    </td>
+                    <td class="bd">
+                        <li><b>User id</b>: <%= full[id].userid %></li>
+                    </td>
+                    <td class="bd">
+                        <li><b>Id</b>: <%= full[id].id %></li>
+                        
+                    </td>
+                </tr>
+            </tbody>
+        </table>       
+    </ul>
+</body>
+</html>
