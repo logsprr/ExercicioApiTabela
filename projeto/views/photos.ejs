@@ -43,13 +43,13 @@
             <tbody>
                 <% for(var i = 0; i < 20 ; i++){ %>
                     <tr>
-                        <td> <img src="<%=photos[i].thumbnailUrl%>"></td>
-                        <td class="right"> <b>Titulo: </b> <%= photos[i].title %> </td>
+                        <td><a href="<%=photos[i].thumbnailUrl%>" ><img src="<%=photos[i].thumbnailUrl%>"></a></td>
+                        <td class="right"> <a href="<%=photos[i].thumbnailUrl%>">Titulo:</a> <%= photos[i].title %> </td>
                         <td>
-                                <td><button class="btn btn-primary" data-toggle="modal" data-target="#mymodal"><%= photos[i].comentarios %> Comentarios</button></td>
-                                <td><img src="https://img.icons8.com/color/48/000000/in-love.png"><%=photos[i].love%></td>
-                                <td><img src="https://img.icons8.com/color/48/000000/vominitg-unicorn.png"><%=photos[i].enjoo%></td>
-                                <td><img src="https://img.icons8.com/color/48/000000/thumb-up.png"><%=photos[i].like%></td>
+                                <td><button class="btn btn-primary" data-toggle="modal" data-target="#mymodal"><%= Math.ceil(Math.random()*4000)%> Comentarios</button></td>
+                                <td><img src="https://img.icons8.com/color/48/000000/in-love.png"><%=Math.ceil(Math.random()*4000)%></td>
+                                <td><img src="https://img.icons8.com/color/48/000000/vominitg-unicorn.png"><%=Math.ceil(Math.random()*4000)%></td>
+                                <td><img src="https://img.icons8.com/color/48/000000/thumb-up.png"><%=Math.ceil(Math.random()*4000)%></td>
                         </td>
                     </tr>
             

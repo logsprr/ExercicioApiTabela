@@ -57,11 +57,7 @@ app.get('/photos?:albumId',(req,resp)=>{
     .then((rows)=>{
         const albumId = req.params.id;
         rows.forEach((row)=>{
-            const comentarios = Math.ceil(Math.random()*4000);
-            const like= Math.ceil(Math.random()*4000);
-            const love =Math.ceil(Math.random()*4000);
-            const enjoo =Math.ceil(Math.random()*4000);
-            photos.push({albumId:albumId, comentarios:comentarios, love:love, enjoo:enjoo, like:like, ...row})
+            photos.push({albumId:albumId, ...row})
         })
         resp.render('photos.ejs', {photos, albumId, inicial, id})
     })
